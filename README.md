@@ -1,21 +1,26 @@
 # Amazon Machine Image (AMI)
 
+### ARCHITECTURE
+
+
+---
+
 ### PROJECT DESCRIPTION
 
 This repository contains configuration for building Custom AMI required for deploying and running Online Bookstore web application. The AMI is built and made available on the AWS accounts by using CircleCI pipeline. The CircleCI pipeline leverages Packer to validate and build AMI.
 
 ---
 
-### Customizations
+### AMI CUSTOMIZATION
 
-1. Installed Java 8 and Maven using ```java.sh``` shell script
-2. Installed Tomcat Server using ```tomcat.sh``` shell script
-3. Installed AWS Cloud Watch using ```cloud-watch.sh``` shell script
-4. Installed AWS Code Deploy Agent and started it using ```deploy-agent.sh``` shell script
+1. Install Java 8 and Maven using ```java.sh``` shell script
+2. Install Tomcat Server using ```tomcat.sh``` shell script
+3. Install AWS Cloud Watch using ```cloud-watch.sh``` shell script
+4. Install AWS Code Deploy Agent and started it using ```deploy-agent.sh``` shell script
 
 ---
 
-### Validate and Build AMI
+### VALIDATE and BUILD AMI
 
 #### Validate AMI
 
