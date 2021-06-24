@@ -1,13 +1,14 @@
 # Amazon Machine Image (AMI)
 
-### ARCHITECTURE
-
-
----
-
 ### PROJECT DESCRIPTION
 
 This repository contains configuration for building Custom AMI required for deploying and running Online Bookstore web application. The AMI is built and made available on the AWS accounts by using CircleCI pipeline. The CircleCI pipeline leverages Packer to validate and build AMI.
+
+---
+
+### ARCHITECTURE
+
+<img alt="home" src="https://github.com/v-abhishek/amazon-machine-image/blob/master/images/Architecture.png" />
 
 ---
 
