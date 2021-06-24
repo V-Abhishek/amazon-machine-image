@@ -23,10 +23,12 @@ This repository contains configuration for building Custom AMI required for depl
 
 #### Build AMI
 
-``` sh packer build
+``` 
+sh packer build
 -var 'aws_access_key=REDACTED'
 -var 'aws_secret_key=REDACTED'
 -var 'aws_region=us-east-1'
 -var 'subnet_id=REDACTED'
-ami.json ```
+ami.json 
+```
 
