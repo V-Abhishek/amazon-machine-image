@@ -2,7 +2,7 @@
 
 ### PROJECT DESCRIPTION
 
-This repository contains configuration for building Custom AMI required for deploying and running Online Bookstore web application. The AMI is built and made available on the AWS accounts by using CircleCI pipeline. The CircleCI pipeline leverages Packer to validate and build AMI.
+This repository contains configuration for building Custom AMI required for deploying and running [Online Bookstore](https://github.com/V-Abhishek/online-bookstore) web application. The AMI is built and made available on the AWS accounts by using CircleCI pipeline. The CircleCI pipeline leverages Packer to validate and build AMI.
 
 ---
 
@@ -17,7 +17,7 @@ This repository contains configuration for building Custom AMI required for depl
 1. Install Java 8 and Maven using ```java.sh``` shell script
 2. Install Tomcat Server using ```tomcat.sh``` shell script
 3. Install AWS Cloud Watch using ```cloud-watch.sh``` shell script
-4. Install AWS Code Deploy Agent and started it using ```deploy-agent.sh``` shell script
+4. Install AWS Code Deploy Agent and start it using ```deploy-agent.sh``` shell script
 
 ---
 
