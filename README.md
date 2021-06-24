@@ -8,7 +8,7 @@ This repository contains configuration for building Custom AMI required for depl
 
 ### ARCHITECTURE
 
-<img alt="home" src="https://github.com/v-abhishek/amazon-machine-image/blob/master/images/Architecture.png" />
+<img alt="Architecture" src="https://github.com/v-abhishek/amazon-machine-image/blob/main/images/Architecture.png" />
 
 ---
 
