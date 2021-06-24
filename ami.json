@@ -1,0 +1,51 @@
+{
+  "variables": {
+    "aws_access_key": "{{env `aws_access_key`}}",
+    "aws_secret_key": "{{env `aws_secret_key`}}",
+    "subnet_id": "subnet-b8885f99",
+    "source_ami": "ami-0ac80df6eff0e70b5",
+    "ami_users":"Account1,Account2",
+    "ssh_username": "ubuntu"
+  },
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "access_key": "{{user `aws_access_key`}}",
+      "secret_key": "{{user `aws_secret_key`}}",
+      "region": "us-east-1",
+      "instance_type": "t2.micro",
+      "subnet_id":"{{user `subnet_id`}}",
+      "source_ami":"{{user `source_ami`}}",
+      "ssh_username": "{{user `ssh_username`}}",
+      "ami_name": "ami_{{timestamp}}",
+      "ami_users": "{{user `ami_users`}}",
+      "ami_description": "Custom AMI for Online BookStore",
+      "launch_block_device_mappings": [
+          {
+            "device_name": "/dev/sda1",
+            "volume_size": 8,
+            "volume_type": "gp2",
+            "delete_on_termination": "true"
+          }
+      ]
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "script":"java.sh"
+    },
+    {
+      "type":"shell",
+      "script":"tomcat.sh"
+    },
+    {
+      "type":"shell",
+      "script":"deploy-agent.sh"
+    },
+    {
+      "type":"shell",
+      "script":"cloud-watch.sh"
+    }
+  ]
+}
